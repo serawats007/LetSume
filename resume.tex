@@ -111,7 +111,14 @@
 }
 
 \renewcommand{\familydefault}{\sfdefault}
-\usepackage[sfdefault]{FiraSans}
+%\usepackage[sfdefault]{FiraSans}
+\usepackage{fontspec}
+\setmainfont{FiraSans-Regular.ttf}[
+  Path=fonts/,
+  BoldFont=FiraSans-Bold.ttf,
+  ItalicFont=FiraSans-Italic.ttf,
+  BoldItalicFont=FiraSans-BoldItalic.ttf
+]
 
 \setlength{\tabcolsep}{12pt}
 
