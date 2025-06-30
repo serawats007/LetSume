@@ -1,0 +1,244 @@
+\documentclass[11pt,a4paper,roman]{moderncv}
+
+% ModernCV theme and color
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+%\usepackage[scale=0.82]{geometry}
+\usepackage{multicol}
+\usepackage{import}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+
+\definecolor{moderncvblue}{RGB}{0,80,160}
+
+\usepackage[hidelinks]{hyperref}
+
+% Personal data
+\name{Sumit}{Kumar}
+\address{\faMapMarker\enspace Bangalore, Karnataka, 560102}{}{}
+
+% Custom entry commands
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\usepackage{hyperref}
+\hypersetup{
+  pdfauthor={Sumit Kumar},
+  pdftitle={Sumit Kumar - Resume},
+  pdfsubject={Quality Analyst | Automation Engineer},
+  pdfkeywords={Selenium, Appium, QA, Java, Test Automation, Bangalore},
+  colorlinks=false,
+  pdfproducer={LaTeX}
+}
+
+% Contact box command
+\newtcolorbox{contactbox}[1][]{
+  colframe=moderncvblue,
+  coltext=moderncvblue,
+  colback=moderncvblue!15,
+  boxrule=0.5pt,
+  arc=4pt,
+  auto outer arc,
+  boxsep=4pt,
+  left=1pt,
+  right=1pt,
+  top=1pt,
+  bottom=1pt,
+  nobeforeafter,
+  halign=center,
+  #1
+}
+
+% Skill bar width and filled portion
+\usepackage{pgfmath}
+\newlength{\skillbarwidth}
+\newlength{\skilltagfullwidth}
+\setlength{\skilltagfullwidth}{2.9cm} % Width of the full skill box
+
+\newcommand{\skilltag}[2]{%
+  \pgfmathsetlength{\skillbarwidth}{#1*\skilltagfullwidth}%
+  \begin{tcolorbox}[
+    enhanced,
+    boxrule=0.4pt,
+    colframe=moderncvblue,
+    colback=moderncvblue!5,
+    arc=4pt,
+    left=1pt,
+    right=1pt,
+    top=1pt,
+    bottom=1pt,
+    width=\skilltagfullwidth,
+    nobeforeafter,
+    height=0.6cm,
+    valign=center,
+    overlay={
+    \begin{scope}
+            \clip[rounded corners=4pt] (interior.south west) rectangle (interior.north east);
+      \fill[moderncvblue!15]
+        (interior.south west) rectangle
+        ([xshift=\skillbarwidth]interior.north west);
+        \end{scope}
+    }]
+    \centering \fontsize{9.5pt}{10pt}\selectfont \strut #2
+  \end{tcolorbox}
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[sfdefault]{FiraSans}
+
+\setlength{\tabcolsep}{12pt}
+
+% Itemize bullets customization
+%\setlist[itemize]{left=1em,label=\textcolor{moderncvblue}{\textbullet},nosep,topsep=2pt}
+\setlist[itemize]{
+  left=1em,
+  label=\textbf{\Large\textcolor{moderncvblue}{$\circ$}}, % Bold open circle bullet
+  nosep,
+  topsep=2pt
+}
+
+
+%----------------------------------------------------------------------------------
+%            Content
+%----------------------------------------------------------------------------------
+\begin{document}
+\makecvtitle
+\vspace*{-12mm}
+
+\begin{center}
+\begin{minipage}[t]{0.3\textwidth}
+\begin{contactbox}
+    \faEnvelope\enspace \href{mailto:serawats007@gmail.com}{serawats007@gmail.com}
+\end{contactbox}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+\begin{contactbox}
+    \faMobile\enspace {+91 955-754-8108}
+\end{contactbox}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+\begin{contactbox}
+    \faLinkedin\enspace \href{https://linkedin.com/in/serawats007}{@serawats007}
+\end{contactbox}
+\end{minipage}
+\end{center}
+\vspace{-6mm}
+
+\section{PROFESSIONAL SUMMARY}
+\vspace{-2mm}
+Resourceful and detail-oriented \textbf{Quality Analyst III with 6+ years of experience} in manual and automated testing on Web and Mobile platforms. Proficient in Selenium, Appium, TestNG, Java, and CI/CD tools with \textbf{strong knowledge of the SDLC and STLC}. Proven ability to build robust automation frameworks, design test strategies, and drive quality improvements in fast-paced Agile environments.
+\vspace{-2mm}
+
+\section{EXPERIENCE}
+\vspace{-2mm}
+{\customcventry{October 2021 - Current}{Quality Analyst II → III}{Glance Digital Experience Private Limited}{Bangalore, Karnataka}{}
+{\begin{itemize}
+  \item Designed, maintained, and executed automated UI and mobile test scripts using Selenium and Appium integrated with TestNG and Maven.
+  \item Integrated test suites with Jenkins for CI, enhancing release reliability.
+  \item Collaborated closely with cross-functional Agile teams to define acceptance criteria and build test plans.
+  \item Led the initiative to improve test coverage by 40\% and reduce regression time by 60\%.
+\end{itemize}}
+}
+
+{\customcventry{September 2018 - September 2021}{Quality Assurance Engineer}{Gambit Sports Private Limited}{Bangalore, Karnataka}{}
+{\begin{itemize}
+  \item Performed end-to-end functional, regression, smoke, and exploratory testing on web and Android apps.
+  \item Created and maintained detailed test documentation, including test cases and test summary reports.
+  \item Collaborated with developers and product stakeholders during sprint planning and analyzed feature requirements.
+\end{itemize}}
+}
+
+{\customcventry{February 2018 - September 2018}{Data Processing Executive}{Tracxn Technologies Private Limited}{Bangalore, Karnataka}{}
+{\begin{itemize}
+  \item Prepared and validated source data for entry, ensuring accuracy and eliminating duplicates.
+  \item Enhanced data integrity and operational efficiency through diligent review and consistent effort.
+\end{itemize}}
+}
+\vspace{-2mm}
+
+\section{TECHNICAL SKILLS}
+\vspace{-2mm}
+\begin{itemize}[leftmargin=1em]
+\item {\textbf{Automation Tools \& Frameworks:}} \vspace{1mm}\\
+\skilltag{0.85}{Selenium} \hspace{2mm}
+\skilltag{0.75}{Appium} \hspace{2mm}
+\skilltag{0.8}{TestNG} \hspace{2mm}
+\skilltag{0.8}{Maven} \hspace{2mm}
+\skilltag{0.7}{RestAssured} \hspace{2mm}
+
+\item {\textbf{Programming:}} \vspace{1mm}\\
+\skilltag{0.9}{Java}
+\hspace{2mm}
+\skilltag{0.7}{Python}
+\hspace{2mm}
+\skilltag{0.8}{HTML/CSS}
+\hspace{2mm}
+\skilltag{0.65}{SQL}
+
+\item {\textbf{Software \& Tools:}} \vspace{1mm}\\
+\skilltag{0.95}{Postman}
+\hspace{2mm}
+\skilltag{0.85}{Android Studio}
+\hspace{2mm}
+\skilltag{0.95}{Chrome DevTools}
+\hspace{2mm}
+\skilltag{0.72}{Jenkins}
+\hspace{2mm}
+\skilltag{0.7}{Git/GitHub}
+
+\item {\textbf{Others:}} \vspace{1mm}\\
+\skilltag{0.95}{JIRA}
+\hspace{2mm}
+\skilltag{0.85}{Zephyr}
+\hspace{2mm}
+\skilltag{0.82}{Figma}
+\hspace{2mm}
+\skilltag{0.7}{Swagger}
+\end{itemize}
+\vspace{-2mm}
+
+\section{EDUCATION}
+\vspace{-2mm}
+{\customcventry{May 2017}{\textbf {Bachelor of Technology:} Computer Science And Engineering}{Madan Mohan Malaviya University of Technology} {Gorakhpur, Uttar Pradesh}{}{}}
+
+{\customcventry{August 2014}{\textbf {Technical Diploma:} Computer Science And Engineering}{Government Polytechnic Bijnor}{Bijnor, Uttar Pradesh}{}{}}
+\vspace{-2mm}
+
+\section{INTERESTS}
+\vspace{-2mm}
+\begin{itemize}
+  \item Exploring new automation tools and frameworks
+  \item Reading tech blogs and fiction
+  \item Playing and Watching sports
+\end{itemize}
+
+\end{document}
