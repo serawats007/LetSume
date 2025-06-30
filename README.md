@@ -1,17 +1,23 @@
 # LetSumé – Resume Generator in LaTeX
 
-A clean, modern, and customizable resume built using LaTeX and the `moderncv` class. Includes skill bars, contact boxes, and a developer-friendly layout.
+🎯 A modern and professional LaTeX resume template using `moderncv`, pre-configured with GitHub Actions for automatic PDF generation.
 
-## 📄 Features
-- ModernCV `banking` style
-- FontAwesome icons
-- Custom skill tags with progress bars
-- Structured experience and education sections
+## 📦 What's Inside
 
-## 📦 Requirements
-- LaTeX distribution (TeX Live or MiKTeX)
-- Packages: moderncv, fontawesome5, tcolorbox, geometry, etc.
+- Fully styled resume using the `banking` style of `moderncv`
+- Contact info boxes, skill bars, and structured layout
+- GitHub Actions workflow to generate `resume.pdf` on every push
 
-## ▶️ Compile
+## 🚀 Usage
+
+### ▶️ 1. Open in Overleaf (Recommended)
+You can directly upload this folder to [Overleaf](https://overleaf.com), no setup needed.
+
+### ▶️ 2. Build via GitHub Actions
+Clone the repo and push changes — GitHub will auto-build the resume and attach the PDF under Actions.
+
+### ▶️ 3. Build Locally (Optional)
+If you have LaTeX installed:
+
 ```bash
 xelatex resume.tex
