@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,roman]{moderncv}
+\documentclass[11pt,a4paper]{moderncv}
 
 % ModernCV theme and color
 \moderncvstyle{banking}
@@ -6,7 +6,7 @@
 \nopagenumbers{}
 
 % Packages
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{fontawesome5}
 \usepackage{tabularx}
 \usepackage{ragged2e}
@@ -110,14 +110,16 @@
   \end{tcolorbox}
 }
 
-\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\sfdefault}
 %\usepackage[sfdefault]{FiraSans}
 \usepackage{fontspec}
 \setmainfont{FiraSans-Regular.ttf}[
   Path=fonts/,
+  Extension=.ttf,
   BoldFont=FiraSans-Bold.ttf,
   ItalicFont=FiraSans-Italic.ttf,
-  BoldItalicFont=FiraSans-BoldItalic.ttf
+  BoldItalicFont=FiraSans-BoldItalic.ttf,
+  UprightFont = *  % fallback style if others fail
 ]
 
 \setlength{\tabcolsep}{12pt}
