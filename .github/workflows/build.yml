@@ -18,6 +18,7 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: resume.tex
+        latexmk_use_xelatex: true
 
     - name: Upload PDF
       uses: actions/upload-artifact@v4
